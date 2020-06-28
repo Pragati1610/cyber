@@ -1,62 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cyber</title>
-    <link rel="stylesheet" href="css/styles.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cyber</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
+
 <body>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <header>
-      <div class="container">
-        <div id="branding">
-          <h1 id="head">Hashcat</h1>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="https://hashcat.net/hashcat/">Hashcat docs</a></li>
-            <li><a href="#Try">Try it!</a></li>
-          </ul>
-        </nav>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1 id="head">Hashcat</h1>
       </div>
-    </header>
-
-    <div id="home" class="">
-      <!-- <h1>Hey</h1> -->
-      <div class="card">
-        
-      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="https://hashcat.net/hashcat/">Hashcat docs</a></li>
+          <li><a href="#Try">Try it!</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="form-wrap">
-        <form class="form" action="">
-            <div id="details">
-                <h1>Fill in : </h1>
+  <h2 id="home">Slide me</h2>
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <div class="card">
+                  <div class="sliderText">
+                      <h3>HashCat..</h3>
+                  </div>
+                  <div class="content">
+                      <p>To decrypt a secret, we require different tools, one of them being HashCat!
+                      </p>
+                      <a href="#read1">Read more</a>
+                  </div>
+              </div>
 
-                <label for="" id="">Hash type:</label>
-                <br>
-                <input type="text" placeholder="As in hashcat docs">
-                <br>
-                <label for="">a> text </label>
-                <input type="checkbox">
-                <br>
-                <label for="">b> file </label>
-                <input type="checkbox">
-                
-                <h2>Choose file</h2>
-                <input type="file">
+          </div>
+          <div class="swiper-slide">
+              <div class="card">
+                  <div class="sliderText">
+                      <h3>Docs.....</h3>
+                  </div>
+                  <div class="content">
+                      <p>A brief on how to use it is provided. Please read it before the usage</p>
+                      <a href="#read2">Read more</a>
+                  </div>
+              </div>
 
-                <h2>Enter hash</h2>
-                <input type="text" placeholder="Hash">
-
+          </div>  
+          <div class="swiper-slide">
+            <div class="card">
+                <div class="sliderText">
+                    <h3>Working..</h3>
+                </div>
+                <div class="content">
+                    <p>Your data collected from the frontend is streamed to our server and ...</p>
+                    <a href="#read3">Read more</a>
+                </div>
             </div>
-        </form>
-        <button class="button-1" type="submit">Submit</button>
+
+        </div>        
+      </div>
+  </div>
+
+  <div id="Try" class="form-wrap">
+    <form class="form" action="/route" method="POST">
+      <div id="details">
+        <h1>Fill in : </h1>
+
+        <label for="" id="">Hash type:</label>
+        <br>
+        <input name="uploadHash-type" type="text" placeholder="As in hashcat docs" id="hash-type">
+        <br>
+
+        <div id="file">
+          <h2>Choose file</h2>
+          <input name="uploadFile" type="file" id="file">
+        </div>
+
+        <div id="hash">
+          <h2>Enter hash</h2>
+          <input name="uploadHash" type="text" placeholder="Hash" id="hash">
+        </div>
+
+      </div>
+    </form>
+    <button class="button-1" type="submit">Submit</button>
+  </div>
+
+
+  <div id="output">
+
+  </div>
+
+  <img id="img1" src="images/hashcat.png" alt="">
+
+  <div class="Content">
+    <div id="read1">
+      <h1>What do we provide : </h1>
+      <p>Password cracking uses a set of commands. To make stuff simpler we provide this interface.</p>
+      <h2>HashCat : 300+ Hash-types implemented</h2>
+      <p>Our interface provides access to all of them.</p>
     </div>
-    <script src="index.js"></script>
+
+    
+    
+    <img id="img2" src="images/security.png" alt="">
+
+    <div id="read2">
+      <h1>Docs :  </h1>
+      <p>You could choose your method of input :</p>
+      <ul>
+        <li>Upload the file</li>
+        <li>Type in the hash</li>
+      </ul>
+      <p>Once you press the submit button we would process your data in the backend and return a response as provided by using hashcat on our server</p>
+    </div>
+
+    <img id="img3" src="images/web-security.png" alt="">
+
+    <div id="read3">
+      <h1>Working : </h1>
+      <ul>
+        <li><p>We process the input from the user by running "hashcat -a <-code of hash-> -m 0 <-hashfile-> <-dictionary->" command and the result is then streamed in and outputted on your screen</p></li>
+        <li><p>If there is no output then most likely hashcat wasn't able to brutefore it so check if the hash type and corresponding hash entered is correct</p></li>
+        <li><p>If there is no error on the user's side, please click on the issue button below and mention the issue in the new window opened</p></li>
+      </ul>
+    </div>
+    <div>
+      <a href="" mailto=""></a>
+    </div>
+  </div>
+  
+  <footer>
+    <p>T&C</p>
+    <p>We just provide a platform to do the processing, no hashes are stored by us.</p>
+    <p>The use of this site was solely meant to easy password decrypting, however the way it is used is totally upto the user which doesn't concern the site developer.</p>
+    <p>If the site is used for password decryption we would naturally assume that these conditions were read and agreed upon.</p>
+  </footer>
+  <script src="index.js">
+  </script>
+  <script src="./css/swiper.min.js"></script>
+  <script>
+      var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+              rotate: 30,
+              stretch: 0,
+              depth: 500,
+              modifier: 1,
+              slideShadows: true,
+          },
+          pagination: {
+              el: '.swiper-pagination',
+          },
+      });
+  </script>
 </body>
 
 </html>

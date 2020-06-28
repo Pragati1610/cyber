@@ -70,17 +70,131 @@ ul{
 
 .form-wrap{
     color: azure;
-    background-color: black;
     width: 50%;
-    margin-left: 27%;
+    margin-left: 25%;
     margin-top: 100px;
     margin-bottom: 100px;
     height: 100%;
 }
 
-#home h1{
-  color: black;
-    background-color: #666666;
+
+/* CARDs */
+
+h2{
+  color: #fff;
 }
 
+.card {
+  position: relative;
+  background: #fff;
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.card .content {
+  width: 400px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.card .content a {
+  display: inline-block;
+  margin: 10px 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  
+  color: #ffffff;
+  font-weight: 600;
+
+}
+
+.card .sliderText {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+}
+
+.card .sliderText h3 {
+  color: #fff;
+  font-size: 3em;
+  padding: 50px;
+}
+
+.swiper-slide{
+  width: 400px;
+}
+
+.swiper-slide:nth-child(1) .sliderText {
+  background: rgb(241, 129, 129);
+}
+
+.swiper-slide:nth-child(1) .card .content a {
+  border: 2px solid #5f1e1e;
+}
+
+.swiper-slide:nth-child(2) .sliderText {
+  background: rgb(129, 241, 148);
+}
+
+.swiper-slide:nth-child(2) .card .content a {
+  border: 2px solid #1e5f23;
+}
+
+.swiper-slide:nth-child(3) .sliderText {
+  background: rgb(168, 129, 241);
+}
+
+.swiper-slide:nth-child(3) .card .content a {
+  border: 2px solid #5f1e3c;
+}
+
+.Content #read1{
+  width: 40%;
+  margin-left: 100px;
+}
+.Content #read2{
+  width: 40%;
+  margin-left: 650px;
+}
+.Content #read3{
+  width: 40%;
+  margin-left: 200px;
+}
+
+#img1{
+  float: right;
+  margin-right: 200px;
+}
+
+#img2{
+  float: left;
+  margin-left: 100px;
+  margin-top: 100px;
+  width: 20%;
+}
+
+#img3{
+  float: right;
+  margin-right: 200px;
+  width: 20%;
+  margin-top: 200px;
+}
+
+.Content h1{
+  color: #0dffc2;
+}
+
+footer{
+  border: 10px #ffffff;
+
+}
+
+footer p{
+  color: #0dffc2;
+}
 
