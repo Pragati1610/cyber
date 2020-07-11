@@ -7,6 +7,8 @@
   <title>cyber</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="./css/swiper.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+  <script src="index.js"></script>
 </head>
 
 <body>
@@ -69,35 +71,44 @@
       </div>
   </div>
 
+  <!-- beginning of form -->
+
   <div id="Try" class="form-wrap">
     <form class="form" action="/route" method="POST">
       <div id="details">
         <h1>Fill in : </h1>
 
-        <label for="" id="">Hash type:</label>
+        <label for="" id="type">Hash type:</label>
         <br>
         <input name="uploadHash-type" type="text" placeholder="As in hashcat docs" id="hash-type">
         <br>
 
-        <div id="file">
+        <!-- <div id="file">
           <h2>Choose file</h2>
           <input name="uploadFile" type="file" id="file">
+        </div> -->
+
+        <div id="pass">
+          <h2>Enter password to check</h2>
+          <input type="text" placeholder="Password" id="pass">
         </div>
 
         <div id="hash">
           <h2>Enter hash</h2>
-          <input name="uploadHash" type="text" placeholder="Hash" id="hash">
+          <inputt type="text" placeholder="Hash" id="hash">
         </div>
 
       </div>
     </form>
-    <button class="button-1" type="submit">Submit</button>
+    <button id="sb" class="button-1" type="submit">Submit</button>
   </div>
 
 
   <div id="output">
 
   </div>
+
+  <!-- end of form -->
 
   <img id="img1" src="images/hashcat.png" alt="">
 
@@ -144,8 +155,6 @@
     <p>The use of this site was solely meant to easy password decrypting, however the way it is used is totally upto the user which doesn't concern the site developer.</p>
     <p>If the site is used for password decryption we would naturally assume that these conditions were read and agreed upon.</p>
   </footer>
-  <script src="index.js">
-  </script>
   <script src="./css/swiper.min.js"></script>
   <script>
       var swiper = new Swiper('.swiper-container', {
